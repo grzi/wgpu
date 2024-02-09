@@ -106,25 +106,8 @@ By @cwfitzgerald in [#5325](https://github.com/gfx-rs/wgpu/pull/5325).
 
 #### General
 - Device lost callbacks are invoked when replaced and when global is dropped. By @bradwerth in [#5168](https://github.com/gfx-rs/wgpu/pull/5168)
-- Fix performance regression when allocating a large amount of resources of the same type. By @nical in [#5229](https://github.com/gfx-rs/wgpu/pull/5229)
-- Fix docs.rs wasm32 builds. By @cwfitzgerald in [#5310](https://github.com/gfx-rs/wgpu/pull/5310)
-- Improve error message when binding count limit hit. By @hackaugusto in [#5298](https://github.com/gfx-rs/wgpu/pull/5298)
-- Remove an unnecessary `clone` during GLSL shader injestion. By @a1phyr in [#5118](https://github.com/gfx-rs/wgpu/pull/5118).
-- Fix missing validation for `Device::clear_buffer` where `offset + size > buffer.size` was not checked when `size` was omitted. By @ErichDonGubler in [#5282](https://github.com/gfx-rs/wgpu/pull/5282).
-
-#### DX12
-- Fix `panic!` when dropping `Instance` without `InstanceFlags::VALIDATION`. By @hakolao in [#5134](https://github.com/gfx-rs/wgpu/pull/5134)
-
-#### OpenGL
-- Fix internal format for the `Etc2Rgba8Unorm` format. By @andristarr in [#5178](https://github.com/gfx-rs/wgpu/pull/5178)
-- Try to load `libX11.so.6` in addition to `libX11.so` on linux. [#5307](https://github.com/gfx-rs/wgpu/pull/5307)
-- Make use of `GL_EXT_texture_shadow_lod` to support sampling a cube depth texture with an explicit LOD. By @cmrschwarz in #[5171](https://github.com/gfx-rs/wgpu/pull/5171).
-
-#### `glsl-in`
-
-- Fix code generation from nested loops. By @cwfitzgerald and @teoxoy in [#5311](https://github.com/gfx-rs/wgpu/pull/5311)
-
-## v0.19.1 (2024-01-21)
+- Fix panic when creating a surface while no backend is available. By @wumpf [#5166](https://github.com/gfx-rs/wgpu/pull/5166)
+- Correctly compute minimum buffer size for array-typed `storage` and `uniform` vars. By @jimblandy [#5222](https://github.com/gfx-rs/wgpu/pull/5222)
 
 #### WGL
 
